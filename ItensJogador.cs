@@ -32,11 +32,11 @@ public class ItensJogador : MonoBehaviour {
         {
             CarregandoItemMao = false;
 
-            ItemMao.transform.position = Jogador.transform.position;
+            ItemMao.transform.position = Jogador.transform.position; //Faz o Item de Mão aparecer perto do Jogador
 
-            ItemMao.SetActive(true);
+            ItemMao.SetActive(true); //Ativa o Item de Mão
 
-            ItemMao.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
+            ItemMao.GetComponent<Rigidbody2D>().gravityScale = 1.0f; //Faz o Item voltar a ser afetado pela gravidade, pelo menos até que encoste denovo no chão
         }
 		
 	}
