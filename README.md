@@ -31,6 +31,11 @@ Scripts feitos até agora:
   Atualiza o contador de cristais
   (OBS: Ver Script "PegarCristais" para mais detalhes)
   
+# ItensJogador
+  Atrelado ao Sprite "Jogador"
+  Permite que o Jogador pegue itens e os largue no chão
+  (OBS: Ver o Script "PegarPlutonio" para mais detalhes)
+  
   # MovimentaçãoJogador
   Atrelado ao Sprite "Jogador"
   Controla o movimento do jogador e suas restrições
@@ -38,6 +43,11 @@ Scripts feitos até agora:
   # PegarCristal
   Atrelado aos Sprites "Cristal"
   Controla quando o Jogador pega um cristal e a animação envolvida
+  
+# PegarPlutonio
+  Atrelado ao Sprite "Plutônio"
+  Permite que o jogador pegue esse item
+  (OBS: é possível generalizar esse Script para que sirva para qualquer "Item de Mão")
   
   # Radiação
   Atrelado aos Sprites "ÁreaRadiação"
