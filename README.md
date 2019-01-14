@@ -40,6 +40,11 @@ Scripts feitos até agora:
   Atrelado ao Sprite "Jogador"
   Controla o movimento do jogador e suas restrições
   
+  # PanoDeFundoSegir
+  Atrelado ao Sprite "PanoDeFundo"
+  Faz com que o Sprite de background siga a camêra
+  (OBS: SIM O NOME DELE ESTÁ "SEGIR" E NÃO "SEGUIR" ALGUÉM POR FAVOR ARRUMA ISSO OBG)
+  
   # PegarCristal
   Atrelado aos Sprites "Cristal"
   Controla quando o Jogador pega um cristal e a animação envolvida
