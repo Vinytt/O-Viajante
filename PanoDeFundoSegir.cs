@@ -8,9 +8,9 @@ public class PanoDeFundoSegir : MonoBehaviour {
 
     public GameObject PanoDeFundo;
 
-    float XCamera;
+    float XCamera; //Float que guarda a posição da Câmera no Eixo X
 
-    float YCamera;
+    float YCamera; //Float que guarda a posição da Câmera no Eixo Y
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +24,7 @@ public class PanoDeFundoSegir : MonoBehaviour {
 
         YCamera = Camera.transform.position.y;
 
+        //Não podemos atribuir o transform.position da Câmera diretamente ao transform.position do Pano de Fundo, por isso precisamos dessas variáveis
         PanoDeFundo.transform.position = new Vector3(XCamera, YCamera, PanoDeFundo.transform.position.z);
 	}
 }

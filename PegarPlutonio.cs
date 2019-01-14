@@ -17,11 +17,12 @@ public class PegarPlutonio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //O Jogador só poderá pegar o Plutônio caso esteja perto dele e não esteja carregando outro Item de Mão
 		if (PertoPlutonio && Input.GetKeyDown("e") && !Jogador.GetComponent<ItensJogador>().CarregandoItemMao)
         {
             Jogador.GetComponent<ItensJogador>().CarregandoItemMao = true;
-            Jogador.GetComponent<ItensJogador>().ItemMao = Plutonio;
-            Plutonio.SetActive(false);
+            Jogador.GetComponent<ItensJogador>().ItemMao = Plutonio; //Torna o Plutônio o Item de Mão do Jogador, Importante para largá-lo depois
+            Plutonio.SetActive(false); //Desativa o Plutônio
         }
 	}
 
@@ -40,8 +41,8 @@ public class PegarPlutonio : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Chao"))
         {
-            Plutonio.GetComponent<Rigidbody2D>().gravityScale = 0;
-            Plutonio.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            Plutonio.GetComponent<Rigidbody2D>().gravityScale = 0; //Faz com que a gravidade pare de afetar o Plutônio (para ele não cair através do chão)
+            Plutonio.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); //Zera a velocidade que o Plutônio já adquiriu durante sua queda até o chão
         }
     }
 

@@ -21,7 +21,7 @@ public class MovimentacaoJogador : MonoBehaviour {
 
     private Vector3 PosicaoJogador; //Guarda a posição do Jogador a cada frame, importante para a animação!
 
-    private bool OlhandoEsquerda; //Retorna true quando o jogador estiver olhando para a Esquerda s2
+    public bool OlhandoEsquerda; //Retorna true quando o jogador estiver olhando para a Esquerda s2
 
     private Vector3 Direcao; //Guarda a transform.localScale do Jogador, importante para virá-lo quando mudar de direção
 
@@ -54,8 +54,8 @@ public class MovimentacaoJogador : MonoBehaviour {
 
         //OBS: para que o Raycast não bata no Collider do Jogdor, devemos colocar o Jogador e os obstáculos em Layers diferentes (criando Layers no menu)
         //Feito isso, usaremos o bit shift Mascara para selecionarmos apenas a camada do Jogador e depois o inverteremos
-        int Mascara = 1 << 10 | 1 << 12; //Seleciona as Layers 10 e 12 para colisão
-        Mascara = ~Mascara; //INVERSÃO: seleciona todas camadas EXCETO as camadas 10 (do jogador) e 12 (Radiação)
+        int Mascara = 1 << 10 | 1 << 12 | 1 << 13; //Seleciona as Layers 10, 12 e 13 para colisão
+        Mascara = ~Mascara; //INVERSÃO: seleciona todas camadas EXCETO as camadas 10 (do jogador), 12 (Áreas, como radiação) e 13 (Itens)
 
         obstaculoFrente = Physics2D.Raycast(new Vector2 (Jogador.transform.position.x, Jogador.transform.position.y) - new Vector2(0, 1.5f), transform.right, 1f, Mascara);
         obstaculoAtras = Physics2D.Raycast(new Vector2 (Jogador.transform.position.x, Jogador.transform.position.y) - new Vector2(0, 1.5f), -transform.right, 1f, Mascara);
