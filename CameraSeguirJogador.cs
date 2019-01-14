@@ -18,7 +18,7 @@ public class CameraSeguirJogador : MonoBehaviour {
 	
 	// Update is called once per frame
 
-    //A função LateUpdate funciona tal como a Update, mas é executada imediatamente DEPOIS
+    //A função LateUpdate e FixedUpdate funcionam tal como a Update, mas são executadas imediatamente DEPOIS
     //Usaremos ela aqui pois o movimento do jogador é executado em um Update, e queremos que a câmera o siga após seu movimento
     //Do Contrário, câmera e jogador "competirão" para se mover primeiro dentro do Update! 
 	void FixedUpdate () {
