@@ -33,7 +33,7 @@ public class AtivarAlavanca : MonoBehaviour {
         }
     }
 
-    //Quando o Jogador COMEÇAR a encostar com o BoxCollider da Alavanca, essa função é executada (apenas uma vez)
+    //Quando o Jogador COMEÇAR a encostar no BoxCollider da Alavanca, essa função é executada (apenas uma vez)
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Jogador"))
