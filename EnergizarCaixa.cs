@@ -35,9 +35,6 @@ public class EnergizarCaixa : MonoBehaviour {
         //a caixa. Queremos que o Jogador possa ativar a caixa usando qualquer Plutônio energizado que tenha em mãos
 		if(!Ativada && PertoDaCaixa && Input.GetKeyDown("q") && Jogador.GetComponent<ItensJogador>().ItemMao.CompareTag("Plutonio") && Jogador.GetComponent<ItensJogador>().ItemMao.GetComponent<EnergiaPlutonio>().Energizado)
         {
-
-            Debug.Log("Entrou no primeiro if");
-
             AnimadorCaixa.SetBool("Ligada", true); //Ativa a animação da Caixa Energizada
 
             Ativada = true;
@@ -56,8 +53,6 @@ public class EnergizarCaixa : MonoBehaviour {
         //4: O Jogador não está carregando nenhum item de mão
         if(Ativada && PertoDaCaixa && Input.GetKeyDown("f") && !Jogador.GetComponent<ItensJogador>().CarregandoItemMao)
         {
-            Debug.Log("Entrou no segundo if");
-
             AnimadorCaixa.SetBool("Ligada", false); //Ativa a animação da Caixa Sem Energia
 
             Ativada = false;
