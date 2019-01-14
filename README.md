@@ -31,6 +31,14 @@ Scripts feitos até agora:
   Atualiza o contador de cristais
   (OBS: Ver Script "PegarCristais" para mais detalhes)
   
+# EnergiaPlutonio
+  Atrelado ao Sprite "Plutônio"
+  Controla quando o Plutônio está energizado ou não
+  
+# EnergizarCaixa
+  Atrelado ao Sprite "CaixaEnergia"
+  Controla a ativação da caixa, que resultará em alguma ação (abrir portas, subir elevadores, etc)
+  
 # ItensJogador
   Atrelado ao Sprite "Jogador"
   Permite que o Jogador pegue itens e os largue no chão
