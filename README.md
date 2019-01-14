@@ -5,7 +5,11 @@ Scripts feitos até agora:
 
 # AbrirMenuPausa
   Atrelado ao EmptyGameObject "Gerenciadorjogo"
-  Ativa o Menu de Pausa, congela o tempo do jogo e contém as funções de atividade dos botões (apenas sair do fogo por enquanto)
+  Ativa o Menu de Pausa, congela o tempo do jogo e contém as funções de atividade dos botões (apenas sair do jogo por enquanto)
+  
+# AbrirPorta
+  Atrelado ao Sprite "Porta"
+  Controla quando a porta deve ser aberta (a partir dos estados das Caixas de Energia), bem como a animação de abertura
   
 # Armadilha
   Atrelado aos Sprites "Armadilha"
