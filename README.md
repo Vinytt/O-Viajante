@@ -74,6 +74,10 @@ Scripts feitos até agora:
   Atrelado ao EmptyGameObject "GerenciadorAudio"
   Script que contém a classe "Som" e seus atributos, que servem para definir Volume, Altura e Objeto Fonte dos Efeitos Sonoros
   
+# ViajemTemporal
+  Atrelado ao Sprite "Jogador"
+  Controla a função de viajar no tempo, ativando/desativando objetos do passado/presente
+  
   # Vida
   Atrelado ao EmptyGameObject "GerenciadorJogo"
   Controla a quantidade e tipo de dano que o jogador toma, sendo também responsável por fazer o Jogador morrer
