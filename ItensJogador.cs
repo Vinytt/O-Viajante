@@ -19,16 +19,22 @@ public class ItensJogador : MonoBehaviour {
     public GameObject ItemMao;
 
     public GameObject Jogador;
-	// Use this for initialization
-	void Start () {
-        CarregandoItemMao = false; //O Jogador nunca começa a fase carregando um item de Mão
-	}
+
+    public GameObject Passado;
+
+    public GameObject Presente;
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         //Largar Item de Mão
-        if(Input.GetKeyDown("e") && CarregandoItemMao)
+        if(Input.GetKeyDown("x") && CarregandoItemMao)
         {
             CarregandoItemMao = false;
 
@@ -36,7 +42,21 @@ public class ItensJogador : MonoBehaviour {
 
             ItemMao.SetActive(true); //Ativa o Item de Mão
 
+            //Como Item de Mão, queremos que caso ele seja deixado no passado, volte a aparecer no presente, e não fique apenas no passado!
+            if (Passado.activeSelf)
+            {
+                ItemMao.transform.SetParent(null); //Assim, o faremos filho de ninguém
+            }
+
+            //Mas caso seja deixado no presente, não pode aparecer no passado!
+            else if (Presente.activeSelf)
+            {
+                ItemMao.transform.SetParent(Presente.transform); 
+            }
+
             ItemMao.GetComponent<Rigidbody2D>().gravityScale = 1.0f; //Faz o Item voltar a ser afetado pela gravidade, pelo menos até que encoste denovo no chão
+
+            ItemMao = null;
         }
 		
 	}

@@ -23,6 +23,8 @@ public class Radiacao : MonoBehaviour {
         {
             GerenciadorJogo.GetComponent<Vida>().Continuar = true; //O bool Continuar recebe true, para que o Dano seja contínuo
             GerenciadorJogo.GetComponent<Vida>().StartCoroutine(GerenciadorJogo.GetComponent<Vida>().TomarDanoContinuo(10, 1f)); //Ativa o dano contínuo
+            //OBS: Quando queremos chamar uma função do tipo "IEnumerator", que tenha um "yield" (ou seja, espera um tempo para fazer algo),
+            //precisamos usar StartCoroutine e usar a chamada de função como parâmetro (vide acima)
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine.UI; //Permite manipular a UI do jogo (no caso, o  texto do con
 
 public class ContadorCristais : MonoBehaviour {
 
-    int CristaisColetados; //Guarda quantos cristais foram coletados até o momento
+    public int CristaisColetados; //Guarda quantos cristais foram coletados até o momento
 
     public Text TextoCristaisColetados;
 

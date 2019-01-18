@@ -9,7 +9,7 @@ public class Vida : MonoBehaviour {
     public GameObject Jogador;
 
     [Range(0, 100f)]
-    float Saude = 100; //Guarda a saúde atual do Jogador
+    public float Saude = 100; //Guarda a saúde atual do Jogador
 
     float SaudeTotal = 100; //Guarda a saúde total do Jogador
 

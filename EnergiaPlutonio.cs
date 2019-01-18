@@ -6,9 +6,11 @@ public class EnergiaPlutonio : MonoBehaviour {
 
     public bool Energizado; //Variável que diz se o Plutônio está energizado ou não
 
+    public GameObject Plutonio;
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
